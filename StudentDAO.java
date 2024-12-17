@@ -13,7 +13,7 @@ public class StudentDAO
 			if (conObj != null) 
 			{
 				/*----Creating PreparedStatement---*/
-				PreparedStatement preStmtObj = conObj.prepareStatement("INSERT INTO VALUES(?,?,?,?)");
+				PreparedStatement preStmtObj = conObj.prepareStatement("INSERT INTO student VALUES(?,?,?,?)");
 				/*------------------------------------------------------------------------------*/
 				/*-----Setting data into prepared statement------*/
 				preStmtObj.setString(1, studentObj.getStdName());  //Invoked from getter and setter from entity class
