@@ -8,11 +8,11 @@ public class StudentEntities
 	private String stdAddress;
 	
 	/*-------------------------Parameterised constructor--------------------------------*/
-	public StudentEntities(int stdId, String stdName, int stdAge, String stdAddress) 
+	public StudentEntities(String stdName, int stdId,  int stdAge, String stdAddress) 
 	{
 		super();
-		this.stdId = stdId;
 		this.studentName = stdName;
+		this.stdId = stdId;
 		this.stdAge = stdAge;
 		this.stdAddress = stdAddress;
 	}
@@ -22,12 +22,12 @@ public class StudentEntities
 		super(); 	// TODO Auto-generated constructor stub
 	}
 	/*------------------------------Getter and Setter-----------------------------------*/
+	public String getStdName() {return studentName;}
+	public void setStdName(String stdName) {this.studentName = stdName;}
+	
 	public int getStdId() {return stdId;}
 	public void setStdId(int stdId) {this.stdId = stdId;}
 	
-	public String getStdName() {return studentName;}
-	public void setStdName(String stdName) {this.studentName = stdName;}
-		
 	public int getStdAge() {return stdAge;}
 	public void setStdAge(int age) {this.stdAge = age;}
 	
@@ -37,7 +37,7 @@ public class StudentEntities
 	@Override
 	public String toString() 
 	{
-		return "StudentEntities [stdId=" + stdId + ", stdName=" + studentName
-				+ ", age=" + stdAge + ", address=" + stdAddress + "]";
+		return "StudentEntities [studentName=" + studentName + ", stdId=" + stdId
+				+ ", Stage=" + stdAge + ", address=" + stdAddress + "]";
 	}		
 }
